@@ -2701,6 +2701,8 @@ This method applies settings contained in an object to the simulation running an
     - **Parameters:**
         - `world_settings` (_[carla.WorldSettings](#carla.WorldSettings)_)  
     - **Return:** _int_  
+    - **Warning:** <font color="#ED2F2F">_If synchronous mode is enabled, and there is a Traffic Manager running, this must be set to sync mode too. Read [this](adv_traffic_manager.md#synchronous-mode) to learn how to do it. 
+_</font>  
 - <a name="carla.World.on_tick"></a>**<font color="#7fb800">on_tick</font>**(<font color="#00a6ed">**self**</font>, <font color="#00a6ed">**callback**</font>)  
 This method is used in [__asynchronous__ mode](https://[carla.readthedocs.io](#carla.readthedocs.io)/en/latest/adv_synchrony_timestep/). It starts callbacks from the client for the function defined as `callback`, and returns the ID of the callback. The function will be called everytime the server ticks. It requires a [carla.WorldSnapshot](#carla.WorldSnapshot) as argument, which can be retrieved from __<font color="#7fb800">wait_for_tick()</font>__. Use __<font color="#7fb800">remove_on_tick()</font>__ to stop the callbacks.  
     - **Parameters:**
